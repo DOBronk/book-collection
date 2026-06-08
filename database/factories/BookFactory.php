@@ -18,7 +18,7 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->title(),
+            'title' => fake()->realTextBetween(8, 30),
         ];
     }
 }

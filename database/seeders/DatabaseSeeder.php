@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Author;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -21,5 +22,13 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        $authorSeed = new AuthorSeeder();
+        $bookSeed = new BookSeeder();
+        $reviewSeed = new ReviewSeeder();
+
+        $authorSeed->run();
+        $bookSeed->run();
+        $reviewSeed->run();
     }
 }
